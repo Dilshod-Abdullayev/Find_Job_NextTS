@@ -1,4 +1,6 @@
 import React from 'react'
+import { CiFacebook, CiInstagram, CiTwitter } from "react-icons/ci";
+import { FaLinkedin } from "react-icons/fa";
 
 export default function Footer() {
     return (
@@ -21,6 +23,12 @@ export default function Footer() {
                             <a href="#" className="hover:underline hover:decoration-sky-500">Contact</a>
                         </li>
                     </ul>
+                    <div className='flex gap-3 cursor-pointer text-sky-500 text-2xl items-center'>
+                        <CiFacebook />
+                        <CiInstagram />
+                        <CiTwitter />
+                        <FaLinkedin />
+                    </div>
                 </div>
             </footer>
 
