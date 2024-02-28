@@ -5,8 +5,8 @@ import { Button, Modal } from 'antd';
 export default function NavPanel() {
   const [modal2Open, setModal2Open] = useState(false);
   return (
-    <div className='flex gap-3'>
-      <button onClick={() => setModal2Open(true)} className=' rounded-xl text-sky-500 hover:bg-slate-200 border-2 border-sky-500 py-1 px-4 font-bold'>Kirish</button>
+    <div className='flex gap-3 max-md:flex-col max-md:items-center'>
+      <button onClick={() => setModal2Open(true)} className='max-md:w-1/3 rounded-xl text-sky-500 hover:bg-slate-200 border-2 border-sky-500 py-1 px-4 font-bold'>Kirish</button>
       <Modal
         centered
         open={modal2Open}
@@ -79,7 +79,7 @@ export default function NavPanel() {
           </div>
         </div>
       </Modal>
-      <button className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl  py-1 px-4'>Register</button>
+      <button className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl max-md:w-1/3  py-1 px-4'>Register</button>
     </div>
   )
 }
