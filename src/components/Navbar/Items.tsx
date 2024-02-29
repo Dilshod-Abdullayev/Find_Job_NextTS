@@ -1,13 +1,31 @@
+import { usePathname } from 'next/navigation';
 import React from 'react'
-const items: string[] = ['Yangiliklar', 'Qaynoq ishlar', 'Biz haqimizda', 'Oxirgi postlar']
-export default function Items() {
+import Link from 'next/link';
+
+const elements: { id: number, text: string, path: string }[] = [
+    { id: 1, text: 'Yangiliklar', path: '/yangiliklar' },
+    { id: 2, text: 'Qaynoq ishlar', path: '/ishlar' },
+    { id: 3, text: 'Biz haqimizda', path: '/haqimizda' },
+    { id: 4, text: 'Oxirgi postlar', path: '/postlar' }
+]
+const Items: React.FC = () => {
+    const router = usePathname();
     return (
         <ul className='flex flex-wrap max-md:p-2 gap-3 max-w-[1240px] max-md:w-full'>
             {
-                items.map((item, index) => (
-                    <li className='max-md:w-full max-md:text-2xl max-md:p-2 cursor-pointer ml-2 text-slate-700 max-md:hover:text-white font-medium whitespace-nowrap' key={index}>{item}</li>
+                elements.map((item, index) => (
+                    <Link
+                        href={item.path}
+                        className={`max-md:w-full max-md:text-2xl max-md:p-2 cursor-pointer ml-2 text-slate-700 max-md:hover:text-white font-medium whitespace-nowrap ${router === item.path ? 'text-sky-500' : ''
+                            }`}
+                        key={item.id}
+                    >
+                        {item.text}
+                    </Link>
                 ))
             }
         </ul>
     )
 }
+
+export default Items;
