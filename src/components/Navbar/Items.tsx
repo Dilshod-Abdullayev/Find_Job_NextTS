@@ -13,10 +13,10 @@ const Items: React.FC = () => {
     return (
         <ul className='flex flex-wrap max-md:p-2 gap-3 max-w-[1240px] max-md:w-full'>
             {
-                elements.map((item, index) => (
+                elements.map((item) => (
                     <Link
                         href={item.path}
-                        className={`max-md:w-full max-md:text-2xl max-md:p-2 cursor-pointer ml-2 text-slate-700 max-md:hover:text-white font-medium whitespace-nowrap ${router === item.path ? 'text-sky-500' : ''
+                        className={`max-md:w-full max-md:text-2xl max-md:p-2 cursor-pointer ml-2  max-md:hover:text-white font-medium whitespace-nowrap ${router === item.path ? 'text-sky-500' : 'text-slate-700'
                             }`}
                         key={item.id}
                     >
