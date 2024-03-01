@@ -2,10 +2,8 @@
 import React, { useState } from 'react'
 import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { Switch } from 'antd';
-import { ConfigProvider, Button, Space, Input, Divider } from 'antd';
-
 export default function JobType() {
-    const [state, setState] = useState(false)
+    const [state, setState] = useState(true)
     const handleOpen = () => {
         setState(!state)
     }
