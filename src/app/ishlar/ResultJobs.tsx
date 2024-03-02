@@ -4,7 +4,6 @@ import { FaBusinessTime } from "react-icons/fa";
 import { SiExpertsexchange } from "react-icons/si";
 import { MdOnlinePrediction } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
-
 export default function ResultJobs() {
   return (
     <div className='flex justify-around p-4  flex-wrap gap-2'>
@@ -42,7 +41,6 @@ export default function ResultJobs() {
           <button className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl max-md:w-1/3  py-1 px-4'>Qabul qilish</button>
         </div>
       </div>
-     
-    </div>
+    </div >
   )
 }
