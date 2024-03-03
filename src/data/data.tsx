@@ -8,7 +8,8 @@ type jobType = {
     typeJob: string,
     techno: string[],
     location: string,
-    salary: number
+    salary: number,
+    intern: boolean
 }
 export const jobData: jobType[] = [
     {
@@ -21,7 +22,8 @@ export const jobData: jobType[] = [
         typeJob: "office",
         techno: ['nodejs,mongodb,express'],
         location: 'tashkent',
-        salary: 1200
+        salary: 1200,
+        intern: true
     },
     {
         id: 2,
@@ -33,6 +35,7 @@ export const jobData: jobType[] = [
         typeJob: "Remote",
         techno: ['Flutter,kotlin'],
         location: 'USA',
-        salary: 1500
+        salary: 1500,
+        intern: false
     }
 ]

@@ -1,10 +1,34 @@
+"use client"
 import React from 'react'
 import { MdDataSaverOn } from "react-icons/md";
 import { FaBusinessTime } from "react-icons/fa";
 import { SiExpertsexchange } from "react-icons/si";
 import { MdOnlinePrediction } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
+import { useSelector } from "react-redux";
+interface RootState {
+  product: {
+    value: jobType[];
+  };
+}
+
+interface jobType {
+  id: number,
+  img: string,
+  position: string,
+  company: string,
+  timeType: string,
+  experiense: string,
+  typeJob: string,
+  techno: string[],
+  location: string,
+  salary: number,
+  intern: boolean
+}
+
 export default function ResultJobs() {
+  const jobs = useSelector((state: RootState) => state.product.value);
+  console.log(jobs);
   return (
     <div className='flex justify-around p-4  flex-wrap gap-2'>
       <div className='w-72 boxshadow h-64 border border-slate-300 p-2  rounded-xl'>
