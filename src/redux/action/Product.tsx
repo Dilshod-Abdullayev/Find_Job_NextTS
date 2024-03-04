@@ -27,16 +27,18 @@ export const Product = createSlice({
     initialState,
     reducers: {
         internHandle: (state) => {
-            const isUnchecked = !state.check;
-            if (isUnchecked) {
+            const updatedCheck = !state.check;
+            if (updatedCheck) {
                 return {
                     ...state,
+                    check: updatedCheck,
                     value: jobData,
                 };
             } else {
                 const internJob = state.value.filter((job) => job.intern);
                 return {
                     ...state,
+                    check: updatedCheck,
                     value: internJob,
                 };
             }

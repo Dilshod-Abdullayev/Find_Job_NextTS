@@ -29,10 +29,10 @@ interface jobType {
 export default function ResultJobs() {
   const jobs = useSelector((state: RootState) => state.product.value);
   return (
-    <div className='flex justify-around p-4  flex-wrap gap-2'>
+    <div className='flex w-full justify-around p-4  flex-wrap gap-2'>
       {
         jobs.map((item) => (
-          <div key={item.id} className='w-72 boxshadow h-64 border border-slate-300 p-2  rounded-xl'>
+          <div key={item.id} className='w-60 boxshadow h-72 align-middle border border-slate-300 p-2  rounded-xl'>
             <div className='flex justify-around items-center'>
               <img src="https://play-lh.googleusercontent.com/L3w73ZSvHAU3C6PmPWeuqKEHe67igSj5Ahovxlf0vBSdWi-31_PrLbHBHoSwmzAVzw"
                 className='w-10 h-10'

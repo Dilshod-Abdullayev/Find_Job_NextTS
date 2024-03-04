@@ -16,9 +16,10 @@ export default function JobType() {
         };
     }
     const checkHandle = () => {
-        const isUnchecked = !check;
+
         dispatch(internHandle());
-        console.log(isUnchecked);
+        console.log(!check);
+
     };
     return (
         <div className='w-full'>
