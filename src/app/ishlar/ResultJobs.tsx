@@ -11,7 +11,6 @@ interface RootState {
     value: jobType[];
   };
 }
-
 interface jobType {
   id: number,
   img: string,

@@ -2,7 +2,6 @@ import React from 'react';
 import { InfoCircleOutlined, UserOutlined } from '@ant-design/icons';
 import { Input, Tooltip } from 'antd';
 import { FaLocationDot } from "react-icons/fa6";
-
 const LocationPanel: React.FC = () => (
     <>
         <Input

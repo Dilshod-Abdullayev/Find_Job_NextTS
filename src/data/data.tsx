@@ -9,7 +9,9 @@ type jobType = {
     techno: string[],
     location: string,
     salary: number,
-    intern: boolean
+    intern: boolean,
+    category: string,
+
 }
 export const jobData: jobType[] = [
     {
@@ -23,7 +25,8 @@ export const jobData: jobType[] = [
         techno: ['nodejs,mongodb,express'],
         location: 'tashkent',
         salary: 1200,
-        intern: true
+        intern: true,
+        category: 'contract',
     },
     {
         id: 2,
@@ -36,7 +39,8 @@ export const jobData: jobType[] = [
         techno: ['Flutter,kotlin'],
         location: 'USA',
         salary: 1500,
-        intern: false
+        intern: false,
+        category: 'contract',
     },
     {
         id: 3,
@@ -49,7 +53,9 @@ export const jobData: jobType[] = [
         techno: ['Java,Spring Boot'],
         location: 'Canada',
         salary: 2000,
-        intern: false
+        intern: false,
+        category: 'contract',
+
     },
     {
         id: 4,
@@ -62,7 +68,9 @@ export const jobData: jobType[] = [
         techno: ['React Native,JavaScript'],
         location: 'Berlin',
         salary: 1800,
-        intern: true
+        intern: true,
+        category: 'contract',
+
     },
     {
         id: 5,
@@ -75,7 +83,9 @@ export const jobData: jobType[] = [
         techno: ['Python,Machine Learning'],
         location: 'Singapore',
         salary: 2500,
-        intern: false
+        intern: false,
+        category: 'contract',
+
     },
     {
         id: 6,
@@ -88,7 +98,9 @@ export const jobData: jobType[] = [
         techno: ['Adobe XD,Figma'],
         location: 'Barcelona',
         salary: 1700,
-        intern: true
+        intern: true,
+        category: 'contract',
+
     },
     {
         id: 7,
@@ -101,7 +113,9 @@ export const jobData: jobType[] = [
         techno: ['Cisco,CCNA'],
         location: 'Australia',
         salary: 2200,
-        intern: false
+        intern: false,
+        category: 'contract',
+
     },
     {
         id: 8,
@@ -114,7 +128,9 @@ export const jobData: jobType[] = [
         techno: ['Docker,Kubernetes'],
         location: 'Tokyo',
         salary: 1900,
-        intern: true
+        intern: true,
+        category: 'contract',
+
     },
     {
         id: 9,
@@ -127,7 +143,9 @@ export const jobData: jobType[] = [
         techno: ['Social Media,SEO'],
         location: 'London',
         salary: 1800,
-        intern: false
+        intern: false,
+        category: 'contract',
+
     },
     {
         id: 10,
@@ -140,7 +158,9 @@ export const jobData: jobType[] = [
         techno: ['Selenium,JIRA'],
         location: 'New York',
         salary: 1600,
-        intern: true
+        intern: true,
+        category: 'contract',
+
     },
     {
         id: 11,
@@ -153,7 +173,9 @@ export const jobData: jobType[] = [
         techno: ['TensorFlow,PyTorch'],
         location: 'San Francisco',
         salary: 2300,
-        intern: false
+        intern: false,
+        category: 'contract',
+
     },
     {
         id: 12,
@@ -166,7 +188,9 @@ export const jobData: jobType[] = [
         techno: ['Ethical Hacking,Firewall'],
         location: 'Dubai',
         salary: 2000,
-        intern: true
+        intern: true,
+        category: 'contract',
+
     },
     {
         id: 13,
@@ -179,7 +203,8 @@ export const jobData: jobType[] = [
         techno: ['Content Creation,SEO'],
         location: 'Paris',
         salary: 1700,
-        intern: false
+        intern: false,
+        category: 'contract',
     },
     {
         id: 14,
@@ -192,7 +217,8 @@ export const jobData: jobType[] = [
         techno: ['Unity,C#'],
         location: 'Los Angeles',
         salary: 1900,
-        intern: true
+        intern: true,
+        category: 'contract',
     },
     {
         id: 15,
@@ -205,6 +231,7 @@ export const jobData: jobType[] = [
         techno: ['SQL,Oracle'],
         location: '',
         salary: 1200,
-        intern: false
+        intern: false,
+        category: 'contract',
     }
 ]

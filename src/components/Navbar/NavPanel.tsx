@@ -1,7 +1,7 @@
 "use client"
 import React, { useState } from 'react'
 import { Button, Modal } from 'antd';
-
+import Link from 'next/link';
 export default function NavPanel() {
   const [modal2Open, setModal2Open] = useState(false);
   return (
@@ -79,7 +79,7 @@ export default function NavPanel() {
           </div>
         </div>
       </Modal>
-      <button className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl max-md:w-1/3  py-1 px-4'>Register</button>
+      <button className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl max-md:w-1/3  py-1 px-4'><Link href="register">Register</Link></button>
     </div>
   )
 }

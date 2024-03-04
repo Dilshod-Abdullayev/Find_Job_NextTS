@@ -12,7 +12,8 @@ type jobType = {
     techno: string[],
     location: string,
     salary: number,
-    intern: boolean
+    intern: boolean,
+
 }
 interface ProductState {
     check: boolean,
@@ -43,6 +44,7 @@ export const Product = createSlice({
                 };
             }
         },
+
     }
 })
 export const { internHandle } = Product.actions
