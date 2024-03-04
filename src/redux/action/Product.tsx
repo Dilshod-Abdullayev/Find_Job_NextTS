@@ -15,9 +15,11 @@ type jobType = {
     intern: boolean
 }
 interface ProductState {
+    check: boolean,
     value: jobType[];
 }
 const initialState: ProductState = {
+    check: true,
     value: jobData
 };
 export const Product = createSlice({
@@ -25,12 +27,20 @@ export const Product = createSlice({
     initialState,
     reducers: {
         internHandle: (state) => {
-            const internJob = state.value.filter((job) => job.intern)
-            return {
-                ...state,
-                value: internJob
+            const isUnchecked = !state.check;
+            if (isUnchecked) {
+                return {
+                    ...state,
+                    value: jobData,
+                };
+            } else {
+                const internJob = state.value.filter((job) => job.intern);
+                return {
+                    ...state,
+                    value: internJob,
+                };
             }
-        }
+        },
     }
 })
 export const { internHandle } = Product.actions
