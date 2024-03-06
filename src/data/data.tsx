@@ -11,7 +11,6 @@ type jobType = {
     salary: number,
     intern: boolean,
     category: string,
-
 }
 export const jobData: jobType[] = [
     {
@@ -26,7 +25,7 @@ export const jobData: jobType[] = [
         location: 'tashkent',
         salary: 1200,
         intern: true,
-        category: 'contract',
+        category: 'fulltime',
     },
     {
         id: 2,
@@ -54,7 +53,7 @@ export const jobData: jobType[] = [
         location: 'Canada',
         salary: 2000,
         intern: false,
-        category: 'contract',
+        category: 'fulltime',
 
     },
     {
@@ -84,7 +83,7 @@ export const jobData: jobType[] = [
         location: 'Singapore',
         salary: 2500,
         intern: false,
-        category: 'contract',
+        category: 'partTime',
 
     },
     {
@@ -99,7 +98,7 @@ export const jobData: jobType[] = [
         location: 'Barcelona',
         salary: 1700,
         intern: true,
-        category: 'contract',
+        category: 'kelishuv',
 
     },
     {
@@ -114,7 +113,7 @@ export const jobData: jobType[] = [
         location: 'Australia',
         salary: 2200,
         intern: false,
-        category: 'contract',
+        category: 'partTime',
 
     },
     {
@@ -174,7 +173,7 @@ export const jobData: jobType[] = [
         location: 'San Francisco',
         salary: 2300,
         intern: false,
-        category: 'contract',
+        category: 'kelishuv',
 
     },
     {
@@ -204,7 +203,7 @@ export const jobData: jobType[] = [
         location: 'Paris',
         salary: 1700,
         intern: false,
-        category: 'contract',
+        category: 'partTime',
     },
     {
         id: 14,
@@ -218,7 +217,7 @@ export const jobData: jobType[] = [
         location: 'Los Angeles',
         salary: 1900,
         intern: true,
-        category: 'contract',
+        category: 'kelishuv',
     },
     {
         id: 15,
