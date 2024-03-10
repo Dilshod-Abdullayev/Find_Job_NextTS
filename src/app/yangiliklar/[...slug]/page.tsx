@@ -50,7 +50,7 @@ export default function page({ params }) {
                             href=""
                             role="button"
                         >
-                            Read more
+                            Orqaga
                         </Link>
                     </div>
                 </div>

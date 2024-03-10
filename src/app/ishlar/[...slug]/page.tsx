@@ -1,13 +1,8 @@
 "use client"
 import React from 'react'
-import { useSelector } from "react-redux";
-
-export default function page() {
-    interface RootState {
-        savejob: {
-            value: jobType[];
-        };
-    }
+import { jobData } from '@/data/data';
+export default function page({ params }) {
+    const newId: jobType = jobData[params.slug[0]]
     interface jobType {
         id: number,
         img: string,
@@ -19,28 +14,31 @@ export default function page() {
         techno: string[],
         location: string,
         salary: number,
-        intern: boolean
+        intern: boolean,
+        category: string,
     }
-    const savejob = useSelector((state: RootState) => state.savejob.value);
     return (
         <div>
             <img className='w-3/4 py-8 rounded-2xl h-96' src='https://images.ctfassets.net/pdf29us7flmy/8BeGNQFpUzIyckf3POYTt/3c6f9d9836cc8d5438ae6a4ddd156c49/4He9LjIo.png' />
             <div className='flex flex-col gap-3'>
-                <h1 className='text-3xl text-sky-500 font-extrabold'>Frontend dasturchi</h1>
+                <h1 className='text-3xl text-sky-500 font-extrabold'>{newId.position}</h1>
                 <hr />
-                <h2 className='text-2xl font-medium'>Sizga taklif qilinayotgani <span className='font-extrabold'>{3400}</span></h2>
+                <h2 className='text-2xl font-medium'>Sizga taklif qilinayotgani <span className='font-extrabold'>{newId.salary}</span></h2>
 
-                <h2 className='mt-2 text-2xl font-medium'>Companiya <span className='font-extrabold text-sky-500'>Najot Ta`lim</span></h2>
-                <h2 className='text-2xl font-medium'>Joylashgan <span className='font-extrabold text-sky-500'>Urgench</span> </h2>
-                <h2 className=' text-2xl font-medium'>So`ralgan tajriba <span className='font-extrabold text-sky-500'>2-4 yil</span> </h2>
-                <h2 className='text-2xl font-medium'>Ishning turi <span className=' font-extrabold text-sky-500'>part time</span> </h2>
+                <h2 className='mt-2 text-2xl font-medium'>Companiya <span className='font-extrabold text-sky-500'>{newId.company}</span></h2>
+                <h2 className='text-2xl font-medium'>Joylashgan <span className='font-extrabold text-sky-500'>{newId.location}</span> </h2>
+                <h2 className=' text-2xl font-medium'>So`ralgan tajriba <span className='font-extrabold text-sky-500'>{newId.experiense}</span> </h2>
+                <h2 className='text-2xl font-medium'>Ishning turi <span className=' font-extrabold text-sky-500'>{newId.category}</span> </h2>
             </div>
             <hr />
             <h2 className='text-2xl font-bold mt-2 text-sky-500'>Majburiy texnologiyalar </h2>
             <div className='flex gap-2 py-4 font-semibold '>
                 <span className=' font-extrabold'>nodejs</span>
-                <span className=' font-extrabold'>mongodb</span>
-                <span className='font-extrabold'>express</span>
+                {
+                    newId.techno.map((item, index) => (
+                        <span key={index} className='font-extrabold'>{item}</span>
+                    ))
+                }
             </div>
             <hr />
             <div className='mt-4'>

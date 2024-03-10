@@ -5,7 +5,9 @@ import { FaBusinessTime } from "react-icons/fa";
 import { SiExpertsexchange } from "react-icons/si";
 import { MdOnlinePrediction } from "react-icons/md";
 import { FaLocationDot } from "react-icons/fa6";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
+import { saveJob } from '@/redux/action/SaveJobs';
+import Link from 'next/link';
 interface RootState {
   product: {
     value: jobType[];
@@ -27,6 +29,7 @@ interface jobType {
 
 export default function ResultJobs() {
   const jobs = useSelector((state: RootState) => state.product.value);
+  const dispatch = useDispatch()
   return (
     <div className='flex w-full justify-around p-4  flex-wrap gap-2'>
       {
@@ -40,7 +43,10 @@ export default function ResultJobs() {
                 <h1 className='text-base leading-2 font-semibold'>{item.position}</h1>
                 <p className='text-sm'>{item.company}</p>
               </div>
-              <MdDataSaverOn className='text-3xl cursor-pointer' />
+              <MdDataSaverOn
+                className='text-3xl cursor-pointer'
+                onClick={() => dispatch(saveJob(item))}
+              />
             </div>
             <div className='flex text-sky-500 w-full mt-2 justify-between px-2 text-xl font-extrabold'>
               <FaBusinessTime className='w-1/3 flex justify-center' />
@@ -62,7 +68,7 @@ export default function ResultJobs() {
             <h1 className='flex items-center text-sky-500 font-extrabold'>Location:<FaLocationDot />  <span className='text-slate-900'>{item.location}</span> </h1>
             <div className='flex items-center justify-around mt-2'>
               <h1 className='text-sky-500 font-extrabold'>{item.salary}$</h1>
-              <button className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl max-md:w-1/3  py-1 px-4'>Qabul qilish</button>
+              <Link href={"ishlar/" + item.id.toString()} className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl max-md:w-1/3  py-1 px-4'>Qabul qilish</Link>
             </div>
           </div>
         ))
