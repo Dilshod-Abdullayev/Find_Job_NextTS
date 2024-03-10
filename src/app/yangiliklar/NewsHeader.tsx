@@ -5,7 +5,10 @@ import { Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
 import CategoryNews from './CategoryNews';
+import { news } from '@/data/data';
+import Link from 'next/link';
 export default function NewsHeader() {
+    const sliceArr = news.slice(1, 4)
     return (
         <div className='flex flex-col '>
             <h1 className='text-2xl pl-4 font-medium'>Siz uchun bizdan ajoyib <span className='text-sky-500'>yangiliklar</span></h1>
@@ -13,29 +16,20 @@ export default function NewsHeader() {
                 <div className='w-7/12 h-96 rounded-2xl' style={{ backgroundImage: 'url("https://www.owlguru.com/wp-content/uploads/wpallimport/files/data-engineers/__(1).jpg")' }}>
                 </div>
                 <div className='w-2/5'>
-                    <div className='flex cursor-pointer items-center   p-4 w-full justify-between'>
-                        <img src='https://www.owlguru.com/wp-content/uploads/wpallimport/files/data-engineers/__(1).jpg' className='w-1/3 h-24 rounded-xl hover:scale-110' />
-                        <div className='flex  flex-col p-2'>
-                            <p className='text-sm text-slate-600 font-medium'>Nov 15, 2023</p>
-                            <h1 className='font-bold leading-5 text-slate-900'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, ipsum.</h1>
-                        </div>
-                    </div>
-                    <div className='flex cursor-pointer items-center   p-4 w-full justify-between'>
-                        <img src='https://www.owlguru.com/wp-content/uploads/wpallimport/files/data-engineers/__(1).jpg' className='w-1/3 h-24 rounded-xl  hover:scale-110' />
-                        <div className='flex  flex-col p-2'>
-                            <p className='text-sm text-slate-600 font-medium'>Nov 15, 2023</p>
-                            <h1 className='font-bold leading-5 text-slate-900'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, ipsum.</h1>
-                        </div>
-                    </div>
-                    <div className='flex cursor-pointer items-center   p-4 w-full justify-between'>
-                        <img src='https://www.owlguru.com/wp-content/uploads/wpallimport/files/data-engineers/__(1).jpg' className='w-1/3 h-24 rounded-xl hover:scale-110' />
-                        <div className='flex  flex-col p-2'>
-                            <p className='text-sm text-slate-600 font-medium'>Nov 15, 2023</p>
-                            <h1 className='font-bold leading-5 text-slate-900'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sit, ipsum.</h1>
-                        </div>
-                    </div>
+                    {
+                        sliceArr.map((item, index) => (
+                            <Link href={"yangiliklar/" + index.toString()} key={item.id} className='flex cursor-pointer items-center   p-4 w-full justify-between'>
+                                <img className='w-32 rounded-lg' src={item.img} />
+                                <div className='flex  flex-col p-2'>
+                                    <p className='text-sm text-slate-600 font-medium'>{item.data}</p>
+                                    <h1 className='font-bold leading-5 text-slate-900'>{item.title}</h1>
+                                </div>
+                            </Link>
+                        ))
+                    }
                 </div>
             </div>
+
             <div className='mt-12'>
                 <h1 className='text-2xl pl-4 font-medium'>Top hikoyalar</h1>
                 <Swiper
