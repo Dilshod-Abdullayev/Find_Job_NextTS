@@ -23,7 +23,8 @@ export default function page({ params }) {
             <div className='flex flex-col gap-3'>
                 <h1 className='text-3xl text-sky-500 font-extrabold'>{newId.position}</h1>
                 <hr />
-                <h2 className='text-2xl font-medium'>Sizga taklif qilinayotgani <span className='font-extrabold'>{newId.salary}</span></h2>
+                <h2 id='salary' className='text-2xl font-medium opacity-0 hover:opacity-100 transition duration-500 ease-in-out'
+                >Sizga taklif qilinayotgani <span className='font-extrabold'>{newId.salary}</span></h2>
 
                 <h2 className='mt-2 text-2xl font-medium'>Companiya <span className='font-extrabold text-sky-500'>{newId.company}</span></h2>
                 <h2 className='text-2xl font-medium'>Joylashgan <span className='font-extrabold text-sky-500'>{newId.location}</span> </h2>
@@ -57,12 +58,13 @@ export default function page({ params }) {
                 <h1 className='font-semibold text-3xl'>Ish beruvchingizga savol bering</h1>
                 <p className='text-xl'>U buni o'z arizasi bilan oladi.</p>
                 <div className='flex flex-wrap gap-4 mt-4'>
-                    <span className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Ish joyi qayerda joylashgan?</span>
-                    <span className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Ish tartibi qanday?</span>
-                    <span className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Bo'sh ish o'rni bormi?</span>
-                    <span className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Ish haqi qancha?</span>
-                    <span className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Siz bilan qanday bog'lanish mumkin?</span>
-                    <span className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Yana bir savol</span>
+                    <a href='' className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Ish joyi qayerda joylashgan?</a>
+                    <a href='' className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Ish tartibi qanday?</a>
+                    <a href='' className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Bo'sh ish o'rni bormi?</a>
+                    <a href='#salary' className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer transition duration-300 ease-in-out'
+                    > Ish haqi qancha?</a>
+                    <a href='' className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Siz bilan qanday bog'lanish mumkin?</a>
+                    <a href='' className='p-2 hover:bg-slate-300 hover:text-white bg-slate-200 rounded-2xl font-medium cursor-pointer'> Yana bir savol</a>
                 </div>
             </div>
         </div>
