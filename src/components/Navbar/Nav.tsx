@@ -25,7 +25,7 @@ export default function Nav() {
             </div>
             <div className={
                 nav
-                    ? 'fixed bg-slate-500 md:hidden left-0 top-0 w-[60%] h-full border-r border-r-gray-900  ease-in-out duration-500'
+                    ? 'fixed bg-slate-500 z-30 md:hidden left-0 top-0 w-[90%] h-full border-r border-r-gray-900  ease-in-out duration-500'
                     : 'ease-in-out w-[60%] duration-500 fixed top-0 bottom-0 left-[-100%]'
             }>
                 <Items />
