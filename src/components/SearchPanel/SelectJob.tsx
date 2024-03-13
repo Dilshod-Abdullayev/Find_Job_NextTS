@@ -8,7 +8,7 @@ const SelectJob: React.FC = () => (
         style={{ width: 200, border: 'none'}}
         placeholder="Ish turi"
         optionFilterProp="children"
-        className='outline-none border-none  text-4xl'
+        className='outline-none border-none  text-4xl '
         filterOption={(input, option) => (option?.label ?? '').includes(input)}
         filterSort={(optionA, optionB) =>
             (optionA?.label ?? '').toLowerCase().localeCompare((optionB?.label ?? '').toLowerCase())

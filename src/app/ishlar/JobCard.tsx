@@ -29,7 +29,7 @@ const JobCard: React.FC<JobCardProps> = ({ item }) => {
     const dispatch = useDispatch();
 
     return (
-        <div key={item.id} className='w-60 boxshadow h-72 align-middle border border-slate-300 p-2  rounded-xl'>
+        <div key={item.id} className='w-60 max-md:w-72 boxshadow h-72 align-middle border border-slate-300 p-2  rounded-xl'>
             <div className='flex justify-around items-center'>
                 <img src="https://play-lh.googleusercontent.com/L3w73ZSvHAU3C6PmPWeuqKEHe67igSj5Ahovxlf0vBSdWi-31_PrLbHBHoSwmzAVzw"
                     className='w-10 h-10'
@@ -63,7 +63,7 @@ const JobCard: React.FC<JobCardProps> = ({ item }) => {
             <h1 className='flex items-center text-sky-500 font-extrabold'>Location:<FaLocationDot />  <span className='text-slate-900'>{item.location}</span> </h1>
             <div className='flex items-center justify-around mt-2'>
                 <h1 className='text-sky-500 font-extrabold'>{item.salary}$</h1>
-                <Link href={"ishlar/" + item.id.toString()} className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl max-md:w-1/3  py-1 px-4'>Qabul qilish</Link>
+                <Link href={"ishlar/" + item.id.toString()} className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl  max-md:w-1/2  py-1 px-4'>Qabul qilish</Link>
             </div>
         </div>
     );

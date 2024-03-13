@@ -19,7 +19,7 @@ export default function JobType() {
         dispatch(internHandle());
     };
     return (
-        <div className="w-full">
+        <div className="w-full max-md:w-2/5">
             <div
                 onClick={handleOpen}
                 className="mt-4 text-lg select-none font-semibold w-full flex justify-between items-center cursor-pointer">

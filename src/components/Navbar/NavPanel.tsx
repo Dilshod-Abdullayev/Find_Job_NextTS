@@ -6,7 +6,7 @@ export default function NavPanel() {
   const [modal2Open, setModal2Open] = useState(false);
   return (
     <div className='flex gap-3 max-md:flex-col max-md:items-center'>
-      <button onClick={() => setModal2Open(true)} className='max-md:w-1/3 rounded-xl text-sky-500 hover:bg-slate-200 border-2 border-sky-500 py-1 px-4 font-bold'>Kirish</button>
+      <button onClick={() => setModal2Open(true)} className=' rounded-xl max-md:text-4xl max-md:w-1/2 text-sky-500 hover:bg-slate-200 border-2 border-sky-500 py-1 px-4 font-bold'>Kirish</button>
       <Modal
         centered
         open={modal2Open}
@@ -79,7 +79,7 @@ export default function NavPanel() {
           </div>
         </div>
       </Modal>
-      <button className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl max-md:w-1/3  py-1 px-4'><Link href="register">Register</Link></button>
+      <button className='bg-sky-600 hover:bg-sky-500 text-white rounded-xl max-md:text-4xl max-md:w-1/2  py-1 px-4'><Link href="register">Register</Link></button>
     </div>
   )
 }

@@ -12,13 +12,13 @@ export default function NewsHeader() {
     return (
         <div className='flex flex-col '>
             <h1 className='text-2xl pl-4 font-medium'>Siz uchun bizdan ajoyib <span className='text-sky-500'>yangiliklar</span></h1>
-            <div className='flex justify-between mt-10'>
-                <div className='w-7/12 h-96 rounded-2xl' style={{ backgroundImage: 'url("https://www.owlguru.com/wp-content/uploads/wpallimport/files/data-engineers/__(1).jpg")' }}>
+            <div className='flex justify-between mt-10  max-md:flex-col'>
+                <div className='w-2/3 max-md:w-full h-96 rounded-2xl' style={{ backgroundImage: 'url("https://www.owlguru.com/wp-content/uploads/wpallimport/files/data-engineers/__(1).jpg")' }}>
                 </div>
-                <div className='w-2/5'>
+                <div className='w-2/5 max-md:w-full max-md:flex max-md:flex-wrap max-md:justify-center max-md:border-b-8 border-slate-600'>
                     {
                         sliceArr.map((item, index) => (
-                            <Link href={"yangiliklar/" + index.toString()} key={item.id} className='flex cursor-pointer items-center   p-4 w-full justify-between'>
+                            <Link href={"yangiliklar/" + index.toString()} key={item.id} className='flex cursor-pointer items-center   p-4 w-full max-md:w-1/2 justify-between'>
                                 <img className='w-32 rounded-lg' src={item.img} />
                                 <div className='flex  flex-col p-2'>
                                     <p className='text-sm text-slate-600 font-medium'>{item.data}</p>
@@ -27,7 +27,7 @@ export default function NewsHeader() {
                             </Link>
                         ))
                     }
-                </div>
+                </div >
             </div>
             <div className='mt-12'>
                 <h1 className='text-2xl pl-4 font-medium'>Top hikoyalar</h1>

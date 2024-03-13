@@ -19,7 +19,7 @@ export default function page({ params }) {
     }
     return (
         <div>
-            <img className='w-3/4 py-8 rounded-2xl h-96' src='https://images.ctfassets.net/pdf29us7flmy/8BeGNQFpUzIyckf3POYTt/3c6f9d9836cc8d5438ae6a4ddd156c49/4He9LjIo.png' />
+            <img className='w-3/4 py-8 rounded-2xl max-md:px-4 h-96' src='https://images.ctfassets.net/pdf29us7flmy/8BeGNQFpUzIyckf3POYTt/3c6f9d9836cc8d5438ae6a4ddd156c49/4He9LjIo.png' />
             <div className='flex flex-col gap-3'>
                 <h1 className='text-3xl text-sky-500 font-extrabold'>{newId.position}</h1>
                 <hr />
@@ -42,19 +42,19 @@ export default function page({ params }) {
                 }
             </div>
             <hr />
-            <div className='mt-4'>
+            <div className='mt-4 max-md:px-4 '>
                 <h1 className='font-extrabold text-2xl text-sky-500'>Context</h1>
                 <p className='font-light '>
                     As our EHS Manager, you will provide support and facilitate the implementation of the company's EHS&Q Management System and national legislation across all of the business by providing timely, accurate and pertinent EHS support including: training, BSP coaching, site-work risk assessments, accident and incident investigation and its processes, environmental compliance advice; introducing new standards and processes where needed, proactive issue management which will affect the EH&S management system together with review of, and assistance in applying, safe systems of work.
                 </p>
             </div>
-            <div className='mt-4'>
+            <div className='mt-4 max-md:px-4 '>
                 <h1 className='font-extrabold text-2xl text-sky-500'>Context</h1>
                 <p className='font-light '>
                     As our EHS Manager, you will provide support and facilitate the implementation of the company's EHS&Q Management System and national legislation across all of the business by providing timely, accurate and pertinent EHS support including: training, BSP coaching, site-work risk assessments, accident and incident investigation and its processes, environmental compliance advice; introducing new standards and processes where needed, proactive issue management which will affect the EH&S management system together with review of, and assistance in applying, safe systems of work.
                 </p>
             </div>
-            <div className='mt-2'>
+            <div className='mt-2 max-md:px-4 '>
                 <h1 className='font-semibold text-3xl'>Ish beruvchingizga savol bering</h1>
                 <p className='text-xl'>U buni o'z arizasi bilan oladi.</p>
                 <div className='flex flex-wrap gap-4 mt-4'>

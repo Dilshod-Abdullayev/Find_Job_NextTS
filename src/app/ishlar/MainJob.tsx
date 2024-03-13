@@ -3,7 +3,7 @@ import JobPanel from './JobPanel'
 import ResultJobs from './ResultJobs'
 export default function MainJob() {
     return (
-        <div className='flex'>
+        <div className='flex max-md:flex-col'>
             <JobPanel />
             <Suspense fallback={'<h1>Loading</h1>'}>
                 <ResultJobs />
