@@ -29,7 +29,6 @@ export default function NewsHeader() {
                     }
                 </div>
             </div>
-
             <div className='mt-12'>
                 <h1 className='text-2xl pl-4 font-medium'>Top hikoyalar</h1>
                 <Swiper
