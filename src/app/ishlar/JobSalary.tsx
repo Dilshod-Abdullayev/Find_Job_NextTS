@@ -25,7 +25,7 @@ export default function JobSalary() {
                 </div>
             </div>
             <Slider max={5000} className='mt-12' defaultValue={600} disabled={disabled} />
-          <h2 >Qidirayotgan maosh {300}</h2>
+            <h2 >Qidirayotgan maosh {300}</h2>
         </div>
     )
 }

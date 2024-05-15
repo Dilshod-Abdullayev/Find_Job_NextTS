@@ -1,4 +1,4 @@
-type jobType = {
+export type jobType = {
     id: number,
     img: string
     position: string,
@@ -11,6 +11,7 @@ type jobType = {
     salary: number,
     intern: boolean,
     category: string,
+    
 }
 type newsType = {
     id: number,
@@ -120,7 +121,7 @@ export const jobData: jobType[] = [
         location: 'Australia',
         salary: 2200,
         intern: false,
-        category: 'partTime',
+        category: 'kelishuv',
 
     },
     {

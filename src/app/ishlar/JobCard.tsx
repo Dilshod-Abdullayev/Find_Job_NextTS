@@ -1,5 +1,5 @@
 "use client"
-import React from 'react';
+import React, { useState } from 'react';
 import { MdDataSaverOn } from "react-icons/md";
 import { FaBusinessTime } from "react-icons/fa";
 import { SiExpertsexchange } from "react-icons/si";
@@ -26,7 +26,12 @@ interface JobCardProps {
 }
 
 const JobCard: React.FC<JobCardProps> = ({ item }) => {
+    const [saved, setSaved] = useState<boolean>(false);
     const dispatch = useDispatch();
+    const handleSave = () => {
+        dispatch(saveJob(item));
+        setSaved(true);
+    }
 
     return (
         <div key={item.id} className='w-60 max-md:w-72 boxshadow h-72 align-middle border border-slate-300 p-2  rounded-xl'>
@@ -39,8 +44,8 @@ const JobCard: React.FC<JobCardProps> = ({ item }) => {
                     <p className='text-sm'>{item.company}</p>
                 </div>
                 <MdDataSaverOn
-                    className='text-3xl cursor-pointer'
-                    onClick={() => dispatch(saveJob(item))}
+                    className={`text-3xl cursor-pointer ${saved ? 'text-blue-500' : ''}`} // Conditionally apply text color
+                    onClick={handleSave}
                 />
             </div>
             <div className='flex text-sky-500 w-full mt-2 justify-between px-2 text-xl font-extrabold'>

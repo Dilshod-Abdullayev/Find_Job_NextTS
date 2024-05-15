@@ -15,6 +15,7 @@ const Items: React.FC = () => {
             {
                 elements.map((item) => (
                     <Link
+                        as={item.path}
                         href={item.path}
                         className={`max-md:w-full max-md:text-white max-md:text-3xl max-md:p-2 cursor-pointer ml-2  max-md:hover:text-white font-medium whitespace-nowrap ${router === item.path ? 'text-sky-500' : 'text-slate-700'
                             }`}

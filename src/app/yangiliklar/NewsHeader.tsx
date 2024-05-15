@@ -59,8 +59,12 @@ export default function NewsHeader() {
                 >
                     {
                         news.map((item) => (
-                            <SwiperSlide>
-                                <Link href={"yangiliklar/" + item.id.toString()}>
+                            <SwiperSlide
+                                key={item.id}
+                            >
+                                <Link
+                                    key={item.id}
+                                    href={"yangiliklar/" + item.id.toString()}>
                                     <div className='flex mt-10 justify-around gap-4 flex-wrap'>
                                         <div className="rounded w-64  shadow-lg flex flex-col">
                                             <div className="relative">
