@@ -1,3 +1,11 @@
+type newsType = {
+    id: number,
+    img: string,
+    data: string,
+    title: string,
+    description: string,
+}
+
 export type jobType = {
     id: number,
     img: string
@@ -11,13 +19,7 @@ export type jobType = {
     intern: boolean,
     category: string,
 }
-type newsType = {
-    id: number,
-    img: string,
-    data: string,
-    title: string,
-    description: string,
-}
+
 export const jobData: jobType[] = [
     {
         id: 1,

@@ -18,18 +18,18 @@ interface jobType {
   location: string,
   salary: number,
   intern: boolean
+  category: string
 }
 const JobCard = React.lazy(() => import('./JobCard'));
 export default function ResultJobs() {
+  const selectedCategories = useSelector((state: RootState) => state.checkaction.selectedCategories);
   const jobs = useSelector((state: RootState) => state.product.value);
+  const filteredJobs = jobs.filter(job => selectedCategories.includes(job.category));
   return (
     <div className='flex w-full justify-around p-4  flex-wrap gap-2'>
-      {
-        jobs.map((item) => (
-          <JobCard key={item.id} item={item} />
-        ))
-      }
-      <h1>Nima gap</h1>
+      {filteredJobs.map(item => (
+        <JobCard key={item.id} item={item} />
+      ))}
     </div >
   )
 }

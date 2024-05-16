@@ -1,6 +1,5 @@
 import React from 'react'
 import JobType from './JobType'
-import JobSalary from './JobSalary'
 
 export default function JobPanel() {
     return (
@@ -11,7 +10,7 @@ export default function JobPanel() {
             </div>
             <div className='max-md:flex max-md:w-full justify-around'>
                 <JobType />
-                <JobSalary />
+                {/* <JobSalary /> */}
             </div>
         </div>
     )
