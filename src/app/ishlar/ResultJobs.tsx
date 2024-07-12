@@ -30,6 +30,7 @@ export default function ResultJobs() {
       {filteredJobs.map(item => (
         <JobCard key={item.id} item={item} />
       ))}
+      
     </div >
   )
 }
