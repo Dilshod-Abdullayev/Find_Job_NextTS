@@ -19,7 +19,19 @@ export type jobType = {
     intern: boolean,
     category: string,
 }
-
+export type JobDataType = {
+    id: number,
+    img: string,
+    position: string,
+    company: string,
+    timeType: string,
+    experiense: string,
+    typeJob: string,
+    techno: string[],
+    location: string,
+    salary: number,
+    intern: boolean,
+};
 export const jobData: jobType[] = [
     {
         id: 1,

@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react'
-import { Button, Modal } from 'antd';
+import { Button, Image, Modal } from 'antd';
 import Link from 'next/link';
 export default function NavPanel() {
   const [modal2Open, setModal2Open] = useState(false);
@@ -15,7 +15,9 @@ export default function NavPanel() {
       >
         <div className="flex min-h-full flex-1 flex-col justify-center px-6 py-12 lg:px-8">
           <div className="sm:mx-auto sm:w-full sm:max-w-sm">
-            <img
+            <Image
+              width={100}
+              height={100}
               className="mx-auto h-10 w-auto"
               src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600"
               alt="Your Company"

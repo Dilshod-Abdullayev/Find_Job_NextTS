@@ -12,7 +12,7 @@ export default function Nav() {
     };
 
     useEffect(() => {
-        const handleClickOutside = (event) => {
+        const handleClickOutside = (event:any) => {
             if (!event.target.closest('.nav-container')) {
                 setNav(false);
             }

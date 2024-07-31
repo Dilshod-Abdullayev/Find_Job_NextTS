@@ -1,28 +1,16 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { RootState } from "../store";
-import { jobData } from "@/data/data";
-type jobType = {
-    id: number,
-    img: string
-    position: string,
-    company: string,
-    timeType: string,
-    experiense: string,
-    typeJob: string,
-    techno: string[],
-    location: string,
-    salary: number,
-    intern: boolean,
+import { jobData, jobType } from "@/data/data"; // Adjust the path if necessary
 
-}
 interface ProductState {
     check: boolean,
     value: jobType[];
 }
+
 const initialState: ProductState = {
     check: true,
-    value: jobData
+    value: jobData 
 };
+
 export const Product = createSlice({
     name: 'product',
     initialState,
@@ -44,9 +32,8 @@ export const Product = createSlice({
                 };
             }
         },
-
     }
-})
-export const { internHandle } = Product.actions
-// export const toggleAction = (state: RootState) => state.mode.value
-export default Product.reducer 
+});
+
+export const { internHandle } = Product.actions;
+export default Product.reducer;

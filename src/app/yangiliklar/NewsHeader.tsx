@@ -7,6 +7,7 @@ import 'swiper/css/pagination';
 import CategoryNews from './CategoryNews';
 import { news } from '@/data/data';
 import Link from 'next/link';
+import { Image } from 'antd';
 export default function NewsHeader() {
     const sliceArr = news.slice(1, 4)
     return (
@@ -21,7 +22,10 @@ export default function NewsHeader() {
                 <div className='w-full md:w-2/5 flex flex-wrap md:flex-col md:justify-center md:border-b-8 border-slate-600'>
                     {sliceArr.map((item, index) => (
                         <Link href={"yangiliklar/" + index.toString()} key={item.id} className='flex cursor-pointer items-center p-4 w-full md:w-1/2'>
-                            <img className='w-32 rounded-lg' src={item.img} alt='News' />
+                            <Image
+                                width={100}
+                                height={100}
+                                className='w-32 rounded-lg' src={item.img} alt='News' />
                             <div className='flex flex-col p-2'>
                                 <p className='text-sm text-slate-600 font-medium'>{item.data}</p>
                                 <h1 className='font-bold leading-5 text-sm text-slate-900'>{item.title}</h1>
@@ -71,7 +75,11 @@ export default function NewsHeader() {
                                         <div className="rounded w-64  shadow-lg flex flex-col">
                                             <div className="relative">
                                                 <div>
-                                                    <img className="w-full h-24 rounded-2xl" src={item.img} />
+                                                    <Image
+                                                        width={100}
+                                                        height={100}
+                                                        alt='News'
+                                                        className="w-full h-24 rounded-2xl" src={item.img} />
                                                     <div className="hover:bg-transparent transition duration-300 absolute bottom-0 top-0 right-0 left-0 bg-gray-900 opacity-25">
                                                     </div>
                                                 </div>

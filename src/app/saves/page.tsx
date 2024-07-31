@@ -2,7 +2,8 @@
 import React from 'react'
 import { useSelector } from "react-redux";
 import JobCard from '../ishlar/JobCard';
-export default function page() {
+
+export default function Page() {
     interface RootState {
         savejob: {
             value: jobType[];
@@ -23,7 +24,7 @@ export default function page() {
     }
     const savejob = useSelector((state: RootState) => state.savejob.value);
     return (
-        <div className='flex w-full justify-around p-4  flex-wrap gap-2'>
+        <div className='flex w-full justify-around p-4 flex-wrap gap-2'>
             {
                 savejob.length > 0 ? (
                     savejob.map((item) => (
@@ -31,6 +32,6 @@ export default function page() {
                     ))
                 ) : <p>No saved jobs found.</p>
             }
-        </div >
+        </div>
     )
 }

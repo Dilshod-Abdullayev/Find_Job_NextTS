@@ -8,6 +8,7 @@ import { FaLocationDot } from "react-icons/fa6";
 import { saveJob } from '@/redux/action/SaveJobs';
 import Link from 'next/link';
 import { useDispatch } from "react-redux";
+import Image from 'next/image';
 
 interface JobCardProps {
     item: {
@@ -36,7 +37,10 @@ const JobCard: React.FC<JobCardProps> = ({ item }) => {
     return (
         <div key={item.id} className='w-60 max-md:w-72 boxshadow h-72 align-middle border border-slate-300 p-2  rounded-xl'>
             <div className='flex justify-around items-center'>
-                <img src="https://play-lh.googleusercontent.com/L3w73ZSvHAU3C6PmPWeuqKEHe67igSj5Ahovxlf0vBSdWi-31_PrLbHBHoSwmzAVzw"
+                <Image
+                width={100}
+                height={100}
+                src="https://play-lh.googleusercontent.com/L3w73ZSvHAU3C6PmPWeuqKEHe67igSj5Ahovxlf0vBSdWi-31_PrLbHBHoSwmzAVzw"
                     className='w-10 h-10'
                     alt="" />
                 <div className='flex flex-col  items-center'>
